@@ -9,15 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <Button
-        android:layout_gravity="center_horizontal"
         android:id="@+id/button_create_personal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/add"
+        android:background="@null"
         android:text="添加人员"
-         />
+        />
 
     <Button
         android:layout_gravity="center_horizontal"
@@ -25,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/verify"
+        android:background="@null"
         android:text="验证人员"
         />
 
@@ -34,7 +39,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/list"
+        android:background="@null"
         android:text="人员列表"
         />
+
+        </LinearLayout>
+
+
 
 </LinearLayout>
