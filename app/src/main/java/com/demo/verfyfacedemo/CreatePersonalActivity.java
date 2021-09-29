@@ -38,7 +38,7 @@ import java.util.regex.Pattern;
 
 public class CreatePersonalActivity extends BaseActivity {
 
-    private VerifyFace verifyFace = new VerifyFace();
+    private VerifyFace verifyFace;
     private EditText idInput;
     private  EditText nameInput;
     private  Button faceBtn;
@@ -62,6 +62,7 @@ public class CreatePersonalActivity extends BaseActivity {
         TextView titleView = (TextView) findViewById(R.id.title_textView);
         titleView.setText("创建人员");
 
+        verifyFace = new VerifyFace();
         loadPress = new LoadPress();
 
         idInput = (EditText) findViewById(R.id.id_editText);

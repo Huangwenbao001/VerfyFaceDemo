@@ -62,6 +62,11 @@ public class VerifyActivity extends BaseActivity {
         Button createBtn = (Button) findViewById(R.id.button_create);
         faceBtn = (Button) findViewById(R.id.face_button1);
 
+        // 编辑按钮
+        Button editBtn = (Button) findViewById(R.id.edit_button);
+        editBtn.setVisibility(View.VISIBLE);
+        editBtn.setText("人员库");
+
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +85,16 @@ public class VerifyActivity extends BaseActivity {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent, 1);
+            }
+        });
+
+        // 人员库列表
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VerifyActivity.this, PersonListActivity.class);
+
+                startActivity(intent);
             }
         });
     }

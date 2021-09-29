@@ -204,7 +204,7 @@ public class VerifyFace {
                 }
             }
             //设置请求体的长度
-        //    httpURLConnection.setRequestProperty("Content-Length", String.valueOf(data.length()));
+            httpURLConnection.setRequestProperty("Content-Length", String.valueOf(data.length()));
 
             //获得输出流，向服务器写入数据
             if (data != null) {
